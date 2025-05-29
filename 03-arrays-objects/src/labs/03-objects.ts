@@ -6,3 +6,35 @@
  */
 
 // TODO: Book 타입, books 배열, availableBooks 필터링
+
+type Book = {
+    title: string;
+    author: string;
+    publishedYear: number;
+    isAvailable: boolean;
+};
+
+let books: Book[] = [
+    {
+        title: "자바스크립트",
+        author: "script",
+        publishedYear: 2020,
+        isAvailable: true,
+    },
+    {
+        title: "타입스크립트",
+        author: "type",
+        publishedYear: 2024,
+        isAvailable: false,
+    },
+];
+
+let availableBooks: Book[] = [];
+
+for (let book of books) {
+    if (book.isAvailable) {
+        availableBooks.push(book);
+    }
+}
+
+console.log(availableBooks);

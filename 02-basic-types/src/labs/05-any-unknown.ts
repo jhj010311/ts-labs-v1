@@ -6,13 +6,16 @@ let guessUnknown: unknown = 42;
 
 // (2) 아래 코드가 각각 컴파일/런타임에서 어떻게 동작하는지 예측하고 실험하세요.
 
+// 컴파일 문제 없음
 // guessAny.toFixed();
-// guessAny.toUpperCase();
+// guessAny.toUpperCase(); // 런타임 에러
 
+// 어느쪽도 컴파일 에러
 // guessUnknown.toFixed();
 // guessUnknown.toUpperCase();
 
 // (3) 타입 가드로 unknown 값을 안전하게 다뤄보세요.
 if (typeof guessUnknown === "number") {
-  // 여기에 toFixed() 사용해보세요.
+    // 여기에 toFixed() 사용해보세요.
+    console.log(guessUnknown.toFixed);
 }

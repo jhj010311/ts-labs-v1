@@ -7,3 +7,23 @@
  */
 
 // TODO: Lecture 타입, lectures 배열, popularLectures, titleList 완성
+
+type Lecture = {
+    title: string;
+    instructor: string;
+    students: number;
+};
+
+let lectures: Lecture[] = [
+    { title: "자바스크립트", instructor: "홍길동", students: 30 },
+    { title: "타입스크립트", instructor: "태길동", students: 40 },
+    { title: "리액트", instructor: "이길동", students: 25 },
+];
+
+let popularLectures: Lecture[] = [];
+
+for (let lecture of lectures) {
+    if (lecture.students >= 30) popularLectures.push(lecture);
+}
+
+console.log(popularLectures);

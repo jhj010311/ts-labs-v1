@@ -3,13 +3,16 @@
 //    1. 항상 예외를 던지는 함수
 //    2. 절대 끝나지 않는 함수(무한루프)
 
-// function throwErr(메시지: string): /* TODO */ {
-//   // 에러 발생
-// }
+function throwErr(메시지: string): never {
+    throw new Error("");
+}
 
-// function runForever(): /* TODO */ {
-//   // 무한루프
-// }
+function runForever(): never {
+    // 무한루프
+    while (true) {
+        console.log("무한루프");
+    }
+}
 
 // (2) never 타입 변수에 어떤 값도 할당할 수 없는지 직접 시도해보세요.
 

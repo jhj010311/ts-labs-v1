@@ -6,3 +6,17 @@
  */
 
 // TODO: StudentScore 타입 선언, scores 배열 생성, passed 계산
+type StudentScore = [name: string, score: number];
+
+let scores: StudentScore[] = [
+    ["홍길동", 60],
+    ["백길동", 70],
+    ["고길동", 90],
+];
+let passed: string[] = [];
+
+for (let score of scores) {
+    if (score[1] >= 70) passed.push(score[0]);
+}
+
+console.log(passed);

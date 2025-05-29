@@ -8,3 +8,30 @@
  */
 
 // TODO: OrderStatus enum, Order 타입, orders 배열, shippedOrders 추출
+
+enum OrderStatus {
+    PENDING,
+    SHIPPED,
+    DELIVERED,
+    CANCELLED,
+}
+
+type Order = {
+    id: number;
+    status: OrderStatus;
+    item: string;
+};
+
+let orders = [
+    { id: 1001, status: OrderStatus.PENDING, item: "Ram" },
+    { id: 1002, status: OrderStatus.SHIPPED, item: "CPU" },
+    { id: 1003, status: OrderStatus.DELIVERED, item: "SSD" },
+];
+
+let shippedOrders: Order[] = [];
+
+for (let order of orders) {
+    if (order.status === OrderStatus.SHIPPED) shippedOrders.push(order);
+}
+
+console.log(shippedOrders);
