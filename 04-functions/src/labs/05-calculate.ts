@@ -8,3 +8,14 @@
 const add = (a: number, b: number) => a + b;
 calculate(10, 20, add) // 30
 */
+
+type Operation = (a: number, b: number) => number;
+
+const add: Operation = (a: number, b: number) => a + b;
+const sub: Operation = (a: number, b: number) => a - b;
+const mul: Operation = (a: number, b: number) => a * b;
+const div: Operation = (a: number, b: number) => a / b;
+
+function calculate(a: number, b: number, op: Operation): number {
+    return op(a, b);
+}

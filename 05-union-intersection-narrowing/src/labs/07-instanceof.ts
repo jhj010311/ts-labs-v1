@@ -2,20 +2,27 @@
 // NotFoundError에는 resource, ValidationError에는 field 프로퍼티가 있음
 
 class NotFoundError extends Error {
-  constructor(public resource: string) {
-    super(`${resource} not found`);
-    this.name = "NotFoundError";
-  }
+    constructor(public resource: string) {
+        super(`${resource} not found`);
+        this.name = "NotFoundError";
+    }
 }
 class ValidationError extends Error {
-  constructor(public field: string) {
-    super(`Invalid input for ${field}`);
-    this.name = "ValidationError";
-  }
+    constructor(public field: string) {
+        super(`Invalid input for ${field}`);
+        this.name = "ValidationError";
+    }
 }
 
 function handleError(err: Error) {
-  // 여기에 코드를 작성하세요.
+    // 여기에 코드를 작성하세요.
+    if (err instanceof NotFoundError) {
+        console.log(err.name, err.message, err.resource);
+    } else if (err instanceof ValidationError) {
+        console.log(err.name, err.message, err.field);
+    } else {
+        console.log(err.name, err.message);
+    }
 }
 
 // 사용 예시

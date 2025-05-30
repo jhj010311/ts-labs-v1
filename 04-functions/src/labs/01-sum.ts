@@ -6,3 +6,15 @@
 예시)
 sum([1, 2, 3]) // 6
 */
+function sum(numbers: number[]): number {
+    // let sum = 0;
+    // for (let num of numbers) {
+    //     sum += num;
+    // }
+
+    // return sum;
+
+    return numbers.reduce((acc, cur) => acc + cur, 0);
+}
+
+console.log(sum([1, 2, 3]));

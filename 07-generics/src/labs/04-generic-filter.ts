@@ -18,7 +18,13 @@
  */
 
 // TODO: 여기에 myFilter 함수를 작성하세요.
+function myFilter<T>(arr: T[], predicate: (item: T) => boolean): T[] {
+    return arr.filter(predicate);
+}
 
 // 아래 코드를 복사해 결과를 확인해 보세요.
 const odds = myFilter([1, 2, 3, 4], (n) => n % 2 === 1); // [1, 3]
 const shortWords = myFilter(["apple", "hi", "bye"], (w) => w.length <= 3); // ["hi", "bye"]
+
+console.log("odds :>> ", odds);
+console.log("shortWords :>> ", shortWords);
