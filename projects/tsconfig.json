@@ -1,8 +1,8 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "strict": true
-    // "moduleDetection": "force"
-  },
-  "include": ["todo-app/public", "number-guess-app/public"]
+    "compilerOptions": {
+        "target": "ESNext",
+        "strict": true,
+        "moduleDetection": "force"
+    },
+    "include": ["todo-app/public", "number-guess-app/public"]
 }
